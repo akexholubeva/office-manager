@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import Answer from './Answer';
+import { Link } from 'react-router-dom';
 
 class Question extends Component {
   render() {
     return (
-      <div>
-        <Link to={`/answer/${this.props.data.id}`}>
+      <li className="circle">
+        <Link to={`/question/${this.props.data.id}`}>
           {this.props.data.question}
         </Link>
-        <Route path="/answer/:answerId" render={ () => (
-          <Answer data={this.props.data} /> 
-        )}/>
-      </div>
+      </li>
     );
   }
 }

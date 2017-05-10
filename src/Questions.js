@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import Question from './Question';
+import QuestionData from './Questions.json';
 
 class Questions extends Component {
   render() {
     return (
-      <div className="Content">
-        {this.props.data.map(item => (
+      <ul>
+        {QuestionData.map(item => (
           <Question key={item.id} data={item} />
         ))}
-      </div>
+      </ul>
     );  
   }
 }
-
-Questions.propTypes = {
-  data: React.PropTypes.array.isRequired,
-};
 
 export default Questions;
