@@ -4,14 +4,11 @@ class Answer extends Component {
   render() {
     return (
       <div>
-        {this.props.data.answer}
+        <p> {this.props.data.question} </p>
+        <p> {this.props.data.answer} </p>
       </div>
     );
   } 
 } 
-
-Answer.propTypes = {
-  data: React.PropTypes.object.isRequired,
-}
 
 export default Answer; 
